@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/admin/dashboard.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Admin _ Dashboard_files/admin.png">
+    <link rel="stylesheet" href="./Admin _ Dashboard_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Admin _ Dashboard_files/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" href="./Admin _ Dashboard_files/style.css">
+    <link rel="stylesheet" href="./Admin _ Dashboard_files/bootstrap.min.js">
+    <link rel="stylesheet" href="./Admin _ Dashboard_files/all.css">
+    <title>Admin | Dashboard</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo" id="logo">
+        <img src="./Admin _ Dashboard_files/admin.png" alt="admin.png">
+      </div>
+      <ul class="menu">
+        <li class="active">
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="set-up" id="set-up">
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-user"></i>
+            <span>Setup</span>
+            </a><ul class="sub-menu"><a href="http://127.0.0.1:5500/admin/dashboard.html#">
+              </a><li><a href="http://127.0.0.1:5500/admin/dashboard.html#">
+                </a><a>user</a>
+              </li>
+              <li>
+                <a>admin</a>
+              </li>
+            </ul>
+          
+        </li>
+        <li>
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-chart-bar"></i>
+            <span>Statistic</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-briefcase"></i>
+            <span>Careers</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-question-circle"></i>
+            <span>FAQS</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-star"></i>
+            <span>Testimonials</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-cog"></i>
+            <span>Settintg</span>
+          </a>
+        </li>
+        <li class="logout">
+          <a href="http://127.0.0.1:5500/admin/dashboard.html#">
+            <i class="fas fa-sign-out"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title">
+          <span>Primary</span>
+          <h2>Dashboard</h2>
+        </div>
+        <div class="user--info">
+          <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+          </select>
+          <div class="search--box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" name="txt-search" id="txt-search" placeholder="search">
+          </div>
+          <img src="./Admin _ Dashboard_files/avatar.jpeg" alt="">
+        </div>
+      </div>
+
+      <div class="tabular-wrapper">
+        <span class="main-title">Table Data</span>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>img</th>
+                <th>OD</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="7">s</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<script src="./Admin _ Dashboard_files/jquery-3.7.1.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var subMenu = $(".sub-menu");
+    // Function to toggle sub-menu on click
+
+    $("#set-up").on("click", function () {
+      subMenu.show(300);
+    });
+    // Function to hide sub-menu when not hovering on the sidebar
+    $(".sidebar").on("mouseleave", function () {
+      $(".sub-menu").hide(300);
+    });
+  });
+</script>
+</body></html>

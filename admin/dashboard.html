@@ -85,9 +85,85 @@
         </li>
       </ul>
     </div>
-    <div class="header--title">
-      <span>Primary</span>
-      <h2>Dashboard</h2>
+
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title">
+          <span>Primary</span>
+          <h2>Dashboard</h2>
+        </div>
+        <div class="user--info">
+          <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+          </select>
+          <div class="search--box">
+            <i class="fa-solid fa-search"></i>
+            <input
+              type="text"
+              name="txt-search"
+              id="txt-search"
+              placeholder="search"
+            />
+          </div>
+          <img src="../themes/asset/img/avatar.jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="tabular-wrapper">
+        <span class="main-title">Table Data</span>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>img</th>
+                <th>OD</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>
+                  <button><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>
+                  <button><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>
+                  <button><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="td">
+              <tr>
+                <td colspan="7">Data</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -95,25 +171,15 @@
 
 <script>
   $(document).ready(function () {
-    $(document).ready(function () {
-      // Function to toggle sub-menu on click
-      $("#logo").on("click", function () {
-        $(".sidebar").toggleClass("expanded");
-      });
+    var subMenu = $(".sub-menu");
+    // Function to toggle sub-menu on click
 
-      // Function to toggle sub-menu on click
-      $("#set-up").on("click", function () {
-        $(".sub-menu").toggle(300);
-      });
-
-      $(".sidebar").on("mouseleave", function () {
-        $(".sub-menu").hide(300);
-      });
-
-      // Function to show sub-menu when hovering on the sidebar
-      $(".sidebar").on("mouseenter", function () {
-        $(".sub-menu").hide(300);
-      });
+    $("#set-up").on("click", function () {
+      subMenu.show(300);
+    });
+    // Function to hide sub-menu when not hovering on the sidebar
+    $(".sidebar").on("mouseleave", function () {
+      $(".sub-menu").hide(300);
     });
   });
 </script>

@@ -201,22 +201,17 @@ td {
   color: #212f3d;
 }
 tr:nth-child(even) {
-  background-color: #f0f0f0;
-}
-tr:hover td {
-  background-color: #f0f0f0; /* Change the color to your preferred hover color */
+  background-color: #fff;
 }
 
 tfoot {
   font-weight: bold;
-
+  color: #fff;
   background: rgba(113, 99, 186, 255);
 }
 
 tfoot td {
-  padding: 1rem;
-  color: #fff;
-  background: rgba(113, 99, 186, 255) !important;
+  padding: 15rem;
 }
 .table-container button {
   color: green;
