@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../themes/asset/img/admin.png" />
     <link
       rel="stylesheet"
       href="../themes/asset/bootstrap/css/bootstrap.min.css"
@@ -16,11 +17,103 @@
       rel="stylesheet"
       href="../themes/asset/bootstrap/js/bootstrap.min.js"
     />
+    <link rel="stylesheet" href="../themes/asset/fontAwsome/css/all.css" />
     <title>Admin | Dashboard</title>
   </head>
   <body>
-    <h1>This is my Dashboard</h1>
+    <div class="sidebar">
+      <div class="logo" id="logo">
+        <img src="../themes/asset/img/admin.png" alt="admin.png" />
+      </div>
+      <ul class="menu">
+        <li class="active">
+          <a href="#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="set-up" id="set-up">
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span>Setup</span>
+            <ul class="sub-menu">
+              <li>
+                <a>user</a>
+              </li>
+              <li>
+                <a>admin</a>
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-chart-bar"></i>
+            <span>Statistic</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-briefcase"></i>
+            <span>Careers</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+            <span>FAQS</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-star"></i>
+            <span>Testimonials</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <span>Settintg</span>
+          </a>
+        </li>
+        <li class="logout">
+          <a href="#">
+            <i class="fas fa-sign-out"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header--title">
+      <span>Primary</span>
+      <h2>Dashboard</h2>
+    </div>
   </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="../themes/asset/fontAwsome/js/fontawesome.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(document).ready(function () {
+      // Function to toggle sub-menu on click
+      $("#logo").on("click", function () {
+        $(".sidebar").toggleClass("expanded");
+      });
+
+      // Function to toggle sub-menu on click
+      $("#set-up").on("click", function () {
+        $(".sub-menu").toggle(300);
+      });
+
+      $(".sidebar").on("mouseleave", function () {
+        $(".sub-menu").hide(300);
+      });
+
+      // Function to show sub-menu when hovering on the sidebar
+      $(".sidebar").on("mouseenter", function () {
+        $(".sub-menu").hide(300);
+      });
+    });
+  });
+</script>
