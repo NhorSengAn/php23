@@ -25,6 +25,7 @@ body {
   height: 100vh;
   color: #fff;
   overflow: hidden;
+  z-index: 9999;
   transition: all 0.5s linear;
   background-color: #212f3d;
 }
@@ -81,6 +82,11 @@ body {
   gap: 1.5rem;
 }
 
+.header--add {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
 .menu a span {
   overflow: hidden;
 }
@@ -193,6 +199,7 @@ thead {
 }
 th {
   padding: 15px;
+  height: 80px;
   text-align: left;
 }
 td {
@@ -208,13 +215,13 @@ tr:hover td {
 }
 
 tfoot {
+  font-size: 16px;
   font-weight: bold;
-
   background: rgba(113, 99, 186, 255);
 }
 
 tfoot td {
-  padding: 1rem;
+  padding: 5px;
   color: #fff;
   background: rgba(113, 99, 186, 255) !important;
 }
