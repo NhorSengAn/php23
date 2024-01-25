@@ -110,10 +110,16 @@
         </div>
       </div>
       <div class="header--add">
-        <div class="main-box">hello that's my new push code</div>
+        <div class="main-box">
+          <div class="btn btn-add">
+            <button class="add">
+              <span><i class="fa-solid fa-plus"></i></span>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="tabular-wrapper">
-        <span class="main-title">Table Data</span>
+        <span class="main-title">User</span>
         <div class="table-container">
           <table>
             <thead>
@@ -157,8 +163,28 @@
                   <button><i class="fa-regular fa-pen-to-square"></i></button>
                 </td>
               </tr>
+              <tr>
+                <td>4</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>
+                  <button><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>John Doe</td>
+                <td>12345.jpg</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>
+                  <button><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
             </tbody>
-            <tfoot class="td">
+            <tfoot>
               <tr>
                 <td colspan="5" class="showing">
                   Showing
@@ -169,7 +195,7 @@
                   <span>0</span> entries
                 </td>
                 <td>
-                  <nav aria-label="Page navigation example">
+                  <nav aria-label="Page navigation example" id="tfooter">
                     <ul class="pagination justify-content-center">
                       <li class="page-item disabled">
                         <a
@@ -216,6 +242,11 @@
     // Function to hide sub-menu when not hovering on the sidebar
     $(".sidebar").on("mouseleave", function () {
       $(".sub-menu").hide(300);
+    });
+
+    //button add item
+    $(".btn-add").on("click", function () {
+      alert("Hello MOm");
     });
   });
 </script>
